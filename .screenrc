@@ -3,6 +3,7 @@
 
 escape ^Tt
 
+
 defkanji utf-8
 defencoding utf-8
 encoding utf-8 utf-8
@@ -91,6 +92,8 @@ caption always '%?%F%{= gW}%:%{= Kk}%?%2n%f%07=%t%?%P *** copy/paste mode ***%:%
 #windowlist title '%{u .g} Num Flags Title%='
 #windowlist string '%4n %{.y}%f%09=%{-} %t %='
 
+# reload
+bind ^. source $HOME/.screenrc
 
 # list windows / list windows sorted MRU
 bind w  windowlist -b

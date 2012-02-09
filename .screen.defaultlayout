@@ -1,4 +1,4 @@
-# from http://yskwkzhr.blogspot.com/2011/12/guide-to-using-gnu-screen-layouts.html
+# base http://yskwkzhr.blogspot.com/2011/12/guide-to-using-gnu-screen-layouts.html
 
 source ~/.screenrc
 
@@ -12,8 +12,8 @@ screen 4
 # create layout
 layout new 0:layout0:vertical
 layout new 1:layout1:horizontal
-layout new 2:dummy
-layout new 3
+layout new 2:layout2:3pane
+layout new 3:dummy
 
 # setup layout0
 layout select 0
@@ -51,6 +51,16 @@ resize -v -l 20%
 focus top
 
 # setup layout2
+layout select layout2:3pane
+split -v
+select 0
+focus right
+split
+select 1
+focus next
+select 2
+
+# setup layout3
 layout remove dummy
 layout select 3
 layout number 2

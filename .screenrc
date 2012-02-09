@@ -1,0 +1,25 @@
+#autodetach on
+#bell_msg "^G"
+
+defkanji utf-8
+defencoding utf-8
+encoding utf-8 utf-8
+defscrollback 10000
+startup_message off
+#vbell off
+#caption always "%{= wb} %-w%{=bu dr}%n %t%{-}%+w %= %{=b wk} [%l] %{=b wb}%y/%m/%d(%D) %{=b wm}%c"
+
+
+escape ^Tt
+
+#hardstatus alwayslastline "[%02c] %`%-w%{=b bw}%n %t%{-}%+w %100=%-8=%c:%s"
+hardstatus alwayslastline " %`%-w%{=b bw}%n %t%{-}%+w %100=%-8=%c:%s"
+
+
+source .screenrc.base
+
+source .screenrc.dev
+
+source .screenrc.layout
+
+

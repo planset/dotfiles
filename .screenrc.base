@@ -1,0 +1,37 @@
+#from http://yskwkzhr.blogspot.com/2011/12/lets-use-development-version-gnu-screen.html
+# switch focus to other region(like vim)
+# orverride default `k'(kill), `t'(time), `b'(break) mappings.
+bind j focus down
+bind k focus up
+bind t focus top
+bind b focus bottom
+
+# continuous region operations(like vim)
+# orverride default `^R'(wrap) mapping.
+bind ^R           eval                'command -c region' 'echo "[Region]"'
+bind r            eval                'command -c region' 'echo "[Region]"'
+bind ^J           eval 'focus down'   'command -c region' 'echo "[Region] (focus down)"'
+bind ^K           eval 'focus up'     'command -c region' 'echo "[Region] (focus up)"'
+bind -c region ^J eval 'focus down'   'command -c region' 'echo "[Region] (focus up)"'
+bind -c region ^K eval 'focus up'     'command -c region' 'echo "[Region] (focus up)"'
+bind -c region ^T eval 'focus top'    'command -c region' 'echo "[Region] (focus top)"'
+bind -c region ^B eval 'focus bottom' 'command -c region' 'echo "[Region] (focus bottom)"'
+bind -c region ^N eval 'focus down'   'command -c region' 'echo "[Region] (focus down)"'
+bind -c region ^P eval 'focus up'     'command -c region' 'echo "[Region] (focus up)"'
+bind -c region +  eval 'resize +1'    'command -c region' 'echo "[Region] (resize +1)"'
+bind -c region -  eval 'resize -1'    'command -c region' 'echo "[Region] (resize -1)"'
+bind -c region j  eval 'resize +1'    'command -c region' 'echo "[Region] (resize +1)"'
+bind -c region k  eval 'resize -1'    'command -c region' 'echo "[Region] (resize -1)"'
+bind -c region J  eval 'resize +10'   'command -c region' 'echo "[Region] (resize +10)"'
+bind -c region K  eval 'resize -10'   'command -c region' 'echo "[Region] (resize -10)"'
+bind -c region =  eval 'resize ='     'command -c region' 'echo "[Region] (resize =)"'
+bind -c region .  eval 'resize min'   'command -c region' 'echo "[Region] (resize min)"'
+bind -c region _  eval 'resize max'   'command -c region' 'echo "[Region] (resize max)"'
+bind -c region n  eval 'split'        'command -c region' 'echo "[Region] (split)"'
+bind -c region s  eval 'split' 'focus down' 'other' 'command -c region' 'echo "[Region] (split)"'
+bind -c region c  eval 'remove'       'command -c region' 'echo "[Region] (remove)"'
+bind -c region o  eval 'only'         'command -c region' 'echo "[Region] (only)"'
+# just a little like emacs
+bind -c region 1  eval 'only'         'command -c region' 'echo "[Region] (split)"'
+bind -c region 2  eval 'split'        'command -c region' 'echo "[Region] (split)"'
+

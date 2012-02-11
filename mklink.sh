@@ -1,7 +1,9 @@
+#!/bin/bash
 
-ln -s $HOME/dotfiles/.screenrc $HOME/
-ln -s $HOME/dotfiles/.screenrc.base $HOME/
-ln -s $HOME/dotfiles/.screenrc.dev $HOME/
-ln -s $HOME/dotfiles/.screenrc.layout $HOME/
-ln -s $HOME/dotfiles/.screen.defaultlayout $HOME/
+DOT_FILES=( .zshrc .gitconfig .gitignore .screenrc .screenrc.dev .screen.defaultlayout)
+
+for file in ${DOT_FILES[@]}
+do
+    ln -s $HOME/dotfiles/$file $HOME/$file
+done
 

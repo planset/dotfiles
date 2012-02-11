@@ -1,0 +1,10 @@
+*.o
+.DS_Store
+.pyo
+.*~
+*~
+tags
+TAGS
+.zshrc.local
+.log
+

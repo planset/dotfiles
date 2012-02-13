@@ -234,6 +234,7 @@ alias -g H='| head'
 alias -g T='| tail'
 alias -g G='| grep'
 alias -g GI='| grep -i'
+alias -g V='| vim -'
 
 alias s='screen -r || screen -c .screen.defaultlayout'
 

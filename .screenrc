@@ -24,17 +24,19 @@ logtstamp on
 logtstamp string "\n-- SCREEN [%Y/%m/%d %02c:%s] %n:%t --\n"
 
 # changes the directory for hardcopy.
-#hardcopydir 'screen/hardcopy'
-#hardcopy_append on
+hardcopydir 'screen/hardcopy'
+hardcopy_append on
 
 # changes the filename used for reading and writing with the paste buffer.
-#bufferfile 'screen/screen-exchange'
+bufferfile 'screen/screen-exchange'
 
 # changes the kind of messages to the nethack-style.
 nethack on
 
 # enable visual vells
-vbell on
+#vbell on
+vbell off
+
 # disables vbell toggle binding to use ^G as cancel.
 bind ^G
 

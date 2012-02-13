@@ -13,8 +13,9 @@ screen 4
 layout new 0:layout0:3pane
 layout new 1:layout1:vertical
 layout new 2:layout2:horizontal
-layout new 3:dummy
-layout new 4:
+layout new 3:layout3:dev
+layout new 4:dummy
+layout new 5:
 
 # setup layout2
 layout select layout0:3pane
@@ -63,6 +64,18 @@ resize -v -l 20%
 focus top
 
 # setup layout3
+layout select layout3:dev
+select 2
+split
+focus down
+select 1
+split -v
+focus bottom
+select 0
+resize -v -l 20%
+focus top
+
+# setup layout4
 layout remove dummy
 layout select 3
 layout number 2
@@ -72,8 +85,11 @@ select 2
 stuff "echo here is current window\n"
 
 # select layout0
-layout select 0
+layout select 3
 focus left
+focus top
 select 0
 stuff "echo here is current window\n"
 layout show
+
+

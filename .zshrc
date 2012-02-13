@@ -237,6 +237,11 @@ alias -g GI='| grep -i'
 
 alias s='screen -r || screen -c .screen.defaultlayout'
 
+ggr () {
+  screen -t "w3m http://www.google.co.jp/search?q=$1"
+}
+alias gg='ggr'
+
 function ssh_screen(){
   eval server='$'$#
   screen -t $server ssh "$@"

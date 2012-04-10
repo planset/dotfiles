@@ -1,6 +1,6 @@
 *.o
 .DS_Store
-.pyo
+*.pyc
 .*~
 *~
 tags

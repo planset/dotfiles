@@ -252,6 +252,10 @@ if [ x$TERM = xscreen ]; then
   alias ssh=ssh_screen
 fi
 
+
+# grep option
+#GREP_OPTIONS="--recursive --color=auto --exclude-dir=.git"
+
 ## load user .zshrc configuration file
 #
 [ -f ${HOME}/.zshrc.local ] && source ${HOME}/.zshrc.local

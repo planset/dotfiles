@@ -176,7 +176,7 @@ bind -c layout ^P eval 'layout prev' 'command -c layout' 'layout show'
 
 
 
-source .screenrc.dev
+source ~/.screenrc.dev
 
-source .screenrc.local
+source ~/.screenrc.local
 

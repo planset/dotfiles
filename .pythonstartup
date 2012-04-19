@@ -1,0 +1,22 @@
+# -*- encoding: utf-8 -*-
+# Python Startup
+import readline
+import rlcompleter
+import atexit
+import os
+
+readline.parse_and_bind('tab: complete')
+readline.parse_and_bind('set input-meta on')
+readline.parse_and_bind('set convert-meta off')
+readline.parse_and_bind('set output-meta on')
+
+histfile = os.path.join(os.environ['HOME'], '.pythonhistory')
+try:
+        readline.read_history_file(histfile)
+except IOError:
+        pass
+atexit.register(readline.write_history_file, histfile)
+del os, histfile, readline, rlcompleter, atexit
+
+import see
+

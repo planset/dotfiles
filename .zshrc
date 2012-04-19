@@ -145,6 +145,7 @@ alias df="df -h"
 
 alias su="su -l"
 
+alias h="history"
 
 ## terminal configuration
 #

@@ -1,97 +1,104 @@
-# base http://yskwkzhr.blogspot.com/2011/12/guide-to-using-gnu-screen-layouts.html
+
+screen 0
 
 source ~/.screenrc
 
-# create window
-screen 0
-screen 1
-screen 2
-screen 3
-screen 4
-
-# create layout
 layout new 0:0:main
-layout new 1:1:dev
-layout new 2:2:dev2
-layout new 3:3:single
-
-# setup layout0
 layout select 0:main
-split
-split -v
-focus right
-resize -l 30%
-eval 'screen -t gtasks 39 gtasks -l 20' '@group Dev/'
-focus down
-resize -v -l 30%
-eval 'screen -t twit 38 twittext' '@group Dev/'
-focus top
-select 3
-
-# setup layout1
-layout select 1:dev
-select 2
-split
-focus down
-select 1
-split -v
-focus bottom
 select 0
-resize -v -l 20%
-focus top
-
-# setup layout2
-layout select 2:dev2
-split
-split -v
-focus down
-resize -v -l 20%
-focus top
-
-# select layout0
-layout select 0
-focus left
-focus top
-select 3
-stuff "echo here is current window\n"
-layout show
 
 
-#layout new 1:layout1:vertical
-#layout new 2:layout2:horizontal
-
-## setup layout1
-#layout select layout1:vertical
-#split -v
-#select 0
-#focus right
-#split
-#split
-#select 1
-#focus next
-#select 2
-#focus down
-#select 3
-#split -v
-#focus bottom
-#select 4
-#focus up
+# base http://yskwkzhr.blogspot.com/2011/12/guide-to-using-gnu-screen-layouts.html
 #
-## setup layout2
-#layout select layout2:horizontal
+## create window
+#screen 0
+#screen 1
+#screen 2
+#screen 3
+#screen 4
+#
+## create layout
+#layout new 0:0:main
+#layout new 2:2:dev2
+#layout new 3:3:single
+#
+## setup layout0
+#layout select 0:main
+#split
+#split -v
+#focus right
+#resize -l 30%
+##eval 'screen -t gtasks 39 gtasks -l 20' '@group Dev/'
+#focus down
+#resize -v -l 30%
+##eval 'screen -t twit 38 twittext' '@group Dev/'
+#focus top
+#select 3
+#
+## setup layout1
+#layout select 1:dev
 #select 2
 #split
 #focus down
 #select 1
 #split -v
-#split -v
-#split -v
-#focus next
-#select 0
-#focus right
-#select 3
 #focus bottom
-#select 4
+#select 0
 #resize -v -l 20%
 #focus top
-
+#
+## setup layout2
+#layout select 2:dev2
+#split
+#split -v
+#focus down
+#resize -v -l 20%
+#focus top
+#
+## select layout0
+#layout select 0
+#focus left
+#focus top
+#select 3
+#stuff "echo here is current window\n"
+#layout show
+#
+#
+##layout new 1:layout1:vertical
+##layout new 2:layout2:horizontal
+#
+### setup layout1
+##layout select layout1:vertical
+##split -v
+##select 0
+##focus right
+##split
+##split
+##select 1
+##focus next
+##select 2
+##focus down
+##select 3
+##split -v
+##focus bottom
+##select 4
+##focus up
+##
+### setup layout2
+##layout select layout2:horizontal
+##select 2
+##split
+##focus down
+##select 1
+##split -v
+##split -v
+##split -v
+##focus next
+##select 0
+##focus right
+##select 3
+##focus bottom
+##select 4
+##resize -v -l 20%
+##focus top
+#

@@ -29,5 +29,6 @@ bind -c region |  eval 'split -v'         'command -c region' 'echo "[Region] (s
 bind -c region 3  eval 'split -v'         'command -c region' 'echo "[Region] (split -v)"'
 # greedy continuous resize region
 bind -c region ^E eval 'resize ='         'command -c region' 'echo "[Region] (resize =)"'
-bind -c region ^X eval 'resize max'       'command -c region' 'echo "[Region] (resize max)
+bind -c region ^X eval 'resize max'       'command -c region' 'echo "[Region] (resize max)"'
+
 

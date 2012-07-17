@@ -253,6 +253,10 @@ if [ x$TERM = xscreen ]; then
   alias ssh=ssh_screen
 fi
 
+#zmv
+autoload -Uz zmv
+alias zmv='noglob zmv -W'
+
 
 # grep option
 #GREP_OPTIONS="--recursive --color=auto --exclude-dir=.git"

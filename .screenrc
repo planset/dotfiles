@@ -76,9 +76,11 @@ termcapinfo xterm 'is=\E[r\E[m\E[2J\E[H\E[?7h\E[?1;4;6l'
 #windowlist title '%{u .g} Num Flags Title%='
 #windowlist string '%4n %{.y}%f%09=%{-} %t %='
 
+
 # changes the windowlist format to suit caption/hardstatus
 windowlist title  '%{u .g}Num Flags Title%=[0-9] select the number [movement] j,C-n:Down k,C-p:Up (C-)f:PageDown (C-)b:PageUp'
 windowlist string '%{.g}%3n %{.y}%f%09=%{dg} %t %='
+windowlist string '%{.g}%3n %{.y}%f%09=%{-} %t %='
 
 #hardstatus alwayslastline "[%02c] %`%-w%{=b bw}%n %t%{-}%+w %100=%-8=%c:%s"
 hardstatus alwayslastline " %`%-w%{=b bw}%n %t%{-}%+w %100=%-8=%c:%s"

@@ -258,6 +258,14 @@ autoload -Uz zmv
 alias zmv='noglob zmv -W'
 
 
+#google search
+function search_google(){
+  eval query='$'$#
+  w3m "http://www.google.co.jp/search?q=$query"
+}
+alias ggr=search_google
+
+
 # grep option
 #GREP_OPTIONS="--recursive --color=auto --exclude-dir=.git"
 

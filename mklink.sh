@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DOT_FILES=( .zshrc .gitconfig .gitignore .screenrc .screenrc.dev .screen.defaultlayout .pythonstartup)
+DOT_FILES=( .zshrc .gitconfig .gitignore .screenrc .screenrc.dev .screen.defaultlayout .pythonstartup .pythonrc.py)
 
 for file in ${DOT_FILES[@]}
 do

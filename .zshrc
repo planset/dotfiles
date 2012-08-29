@@ -273,3 +273,12 @@ alias ggr=search_google
 #
 [ -f ${HOME}/.zshrc.local ] && source ${HOME}/.zshrc.local
 
+#cdd
+autoload -U compinit
+compinit
+source ~/dotfiles/cdd
+
+function chpwd() {
+  _reg_pwd_screennum
+}
+

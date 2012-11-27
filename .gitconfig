@@ -16,6 +16,7 @@
   default = tracking
 [merge]
   tool = vimdiff
+  ff = false
 [alias]
   st = status
   sh = show

@@ -141,7 +141,14 @@ alias la="ls -a"
 alias lf="ls -F"
 alias ll="ls -l"
 
-alias du="du -h -d 1"
+case "${OSTYPE}" in
+freebsd*|darwin*)
+    alias du="du -h -d 1"
+    ;;
+linux*)
+    alias du="du -h --max-depth=1"
+    ;;
+esac
 alias df="df -h"
 
 alias su="su -l"

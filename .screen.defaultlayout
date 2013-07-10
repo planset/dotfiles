@@ -1,12 +1,39 @@
-
-screen 0
-
+#
+#  default layout
+#
 source ~/.screenrc
 
-layout new 0:0:main
-layout select 0:main
+#
+# create layout
+#
+layout new 0:0:single
+
+layout new 1:1:two
+split
+
+layout new 2:2:three
+split
+split -v
+focus down
+resize -v -l 30%
+
+layout new 3:3:four
+split -v
+split
+focus right
+split
+
+#
+# create screen
+#
+layout select 0:single
 select 0
 
+
+
+#layout new 0:0:main
+#layout select 0:main
+#select 0
 
 # base http://yskwkzhr.blogspot.com/2011/12/guide-to-using-gnu-screen-layouts.html
 #

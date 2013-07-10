@@ -1,0 +1,25 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+import os
+import sys
+import datetime
+import random
+
+FILE_NAME = 'faces.txt'
+CUR_DIR = os.path.dirname(os.path.abspath(__file__))
+
+filepath = os.path.join(CUR_DIR, FILE_NAME)
+if not os.path.exists(filepath):
+    sys.exit(1)
+
+faces = []
+with open(filepath, 'r') as f:
+    faces = f.readlines()
+
+_now = datetime.datetime.now()
+_seed = int(_now.strftime('%Y%m%d%H%M'))
+random.seed(_seed)
+
+print faces[random.randint(0, len(faces)-1)]
+
+# vim: tabstop=4 expandtab shiftwidth=4 softtabstop=4

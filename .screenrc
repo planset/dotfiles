@@ -1,15 +1,22 @@
 #autodetach on
 #bell_msg "^G"
 
+#
+# 
+#
 escape ^Tt
 
-
+#
+# 
+#
 defkanji utf-8
 defencoding utf-8
 encoding utf-8 utf-8
 
+# スクロールバッファ
 defscrollback 10000
 
+# 起動時のメッセージの制御
 startup_message off
 
 # don't remove windows from the window list as soon as window process exits.
@@ -71,11 +78,6 @@ termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
 
 # don't resize terminal width when re-attached.
 termcapinfo xterm 'is=\E[r\E[m\E[2J\E[H\E[?7h\E[?1;4;6l'
-
-
-#windowlist title '%{u .g} Num Flags Title%='
-#windowlist string '%4n %{.y}%f%09=%{-} %t %='
-
 
 # changes the windowlist format to suit caption/hardstatus
 windowlist title  '%{u .g}Num Flags Title%=[0-9] select the number [movement] j,C-n:Down k,C-p:Up (C-)f:PageDown (C-)b:PageUp'

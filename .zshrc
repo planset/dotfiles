@@ -349,6 +349,20 @@ bindkey '^m' do_enter
 
 
 #
+# git 
+# 
+GITCOMPLETION=$HOME/src/git/contrib/completion/git-completion.zsh
+if [ -r $GITCOMPLETION ]; then
+  zstyle ':completion:*:*:git:*' script $HOME/src/git/contrib/completion/git-completion.zsh
+fi
+GIT_PROMPT=$HOME/src/git/contrib/completion/git-prompt.sh
+if [ -r $GIT_PROMPT ]; then
+  source $GIT_PROMPT
+  RPROMPT='[$(__git_ps1 "%s")]'
+fi
+
+
+#
 # tmux
 #
 function execute_tmux() {

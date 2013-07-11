@@ -25,7 +25,7 @@ ZSH_THEME="cloud"
 # DISABLE_LS_COLORS="true"
 
 # Uncomment following line if you want to disable autosetting terminal title.
-# DISABLE_AUTO_TITLE="true"
+DISABLE_AUTO_TITLE="true"
 
 # Uncomment following line if you want to disable command autocorrection
 # DISABLE_CORRECTION="true"
@@ -47,6 +47,6 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 
+PROMPT='$(virtualenv_prompt_info)'$PROMPT
 source $HOME/.zshrc.mine
-#source $HOME/dotfiles/my.zsh-theme
 

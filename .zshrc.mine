@@ -177,7 +177,7 @@ alias h="history"
 #
 # user path 
 #
-export PATH=$HOME/local/bin:/opt/local/bin:$PATH
+export PATH=$HOME/local/bin:/opt/local/bin:/usr/local/bin:$PATH
 
 
 #
@@ -367,3 +367,5 @@ alias tm='execute_tmux'
 #
 [ -f $HOME/.zshrc.local ] && source $HOME/.zshrc.local
 
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"

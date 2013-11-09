@@ -45,9 +45,15 @@ plugins=(django fabric git gnu-utils go golang knife mercurial node npm osx pip 
 
 source $ZSH/oh-my-zsh.sh
 
-# Customize to your needs...
 
-PROMPT='[$HOST]$(virtualenv_prompt_info)'$PROMPT
+# Customize to your needs...
+PROMPT='$(virtualenv_prompt_info)'$PROMPT
+if [[ -z "$SSY_TTY" ]]; then
+	PROMPT='[$HOST]'$PROMPT
+else
+	PROMPT='%{$fg_bold[green]%}[$HOST]%{$reset_color%}'$PROMPT
+fi
+
 source $HOME/.zshrc.mine
 
 

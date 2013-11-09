@@ -47,6 +47,9 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 
-PROMPT='$(virtualenv_prompt_info)'$PROMPT
+PROMPT='[$HOST]$(virtualenv_prompt_info)'$PROMPT
 source $HOME/.zshrc.mine
 
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"

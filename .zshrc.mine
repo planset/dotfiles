@@ -257,7 +257,7 @@ alias zmv='noglob zmv -W'
 #cdd
 autoload -U compinit
 compinit
-source $HOME/dotfiles/bin/cdd
+source $HOME/dotfiles/bin/cdd/cdd
 
 function chpwd() {
   _reg_pwd_screennum

@@ -1,6 +1,6 @@
 [user]
   name = Daisuke Igarashi
-  email = planset@gmail.com
+  email = daisuke@dkpyn.com
 [core]
   editor = vim -c \"set fenc=utf-8\"
   quotepath = false

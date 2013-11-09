@@ -48,7 +48,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 PROMPT='$(virtualenv_prompt_info)'$PROMPT
-if [[ -z "$SSY_TTY" ]]; then
+if [ -z "$SSH_TTY" ]; then
 	PROMPT='[$HOST]'$PROMPT
 else
 	PROMPT='%{$fg_bold[green]%}[$HOST]%{$reset_color%}'$PROMPT

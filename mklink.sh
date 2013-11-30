@@ -8,5 +8,3 @@ do
 done
 
 mkdir -p ~/.zsh
-
-

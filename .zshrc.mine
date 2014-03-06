@@ -101,6 +101,7 @@ autoload zed
 #predict-off
 
 
+#
 ## Alias configuration
 #
 # expand aliases before completing
@@ -129,6 +130,9 @@ alias df="df -h"
 alias su="su -l"
 
 alias h="history"
+
+
+alias pytestwatch='watchmedo shell-command --patterns="*.py" --command="py.test"'
 
 #
 # aliases

@@ -6,8 +6,7 @@ ZSH=$HOME/dotfiles/oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 
-ZSH_THEME="cloud"
-ZSH_THEME="amuse"
+ZSH_THEME="arrow" 
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -17,7 +16,7 @@ ZSH_THEME="amuse"
 # CASE_SENSITIVE="true"
 
 # Comment this out to disable bi-weekly auto-update checks
-# DISABLE_AUTO_UPDATE="true"
+DISABLE_AUTO_UPDATE="true"
 
 # Uncomment to change how often before auto-updates occur? (in days)
 # export UPDATE_ZSH_DAYS=13
@@ -58,6 +57,8 @@ fi
 
 source $HOME/.zshrc.mine
 
+# oh-my-zsh theme
+source $HOME/dotfiles/my.zsh-theme
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"

@@ -1,0 +1,21 @@
+#!/usr/bin/env python
+import os
+import sys
+import datetime
+import random
+
+FILE_NAME = 'faces.txt'
+CUR_DIR = os.path.dirname(os.path.abspath(__file__))
+
+filepath = os.path.join(CUR_DIR, FILE_NAME)
+if not os.path.exists(filepath):
+    sys.exit(1)
+
+faces = []
+with open(filepath, 'r') as f:
+    faces = f.readlines()
+
+_now = datetime.date.today()
+random.seed(_now.toordinal())
+
+print faces[random.randint(0, len(faces)-1)]

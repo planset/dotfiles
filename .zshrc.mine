@@ -173,7 +173,7 @@ alias -g G='| grep'
 alias -g GI='| grep -i'
 alias -g V='| vim -'
 
-alias s="screen -r || screen -c $HOME/.screen.defaultlayout"
+#alias s="screen -r || screen -c $HOME/.screen.defaultlayout"
 
 
 #

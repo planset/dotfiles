@@ -1,5 +1,5 @@
 if [ $UID -eq 0 ]; then NCOLOR="red"; else NCOLOR="yellow"; fi
-if [ -n "$SSH_CLIENT" ]; then NCOLOR="blue"; fi
+if [ -n "$SSH_CLIENT" ]; then NCOLOR="cyan"; fi
 
 PROMPT='%{$fg[$NCOLOR]%}%n@%m%{${fg_bold[blue]}%}: %{$reset_color%}%{${fg[green]}%}%1~%{${fg_bold[$CARETCOLOR]}%} > %{${reset_color}%} '
 RPROMPT='%{$fg[red]%}%p $(git_prompt_info)%{$reset_color%}$(virtualenv_prompt_info)%{$reset_color%}'

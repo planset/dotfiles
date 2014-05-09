@@ -4,3 +4,6 @@
 [submodule "bin/cdd"]
 	path = bin/cdd
 	url = https://github.com/m4i/cdd
+[submodule "zsh-autosuggestions"]
+	path = zsh-autosuggestions
+	url = git://github.com/tarruda/zsh-autosuggestions

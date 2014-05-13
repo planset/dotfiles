@@ -173,7 +173,7 @@ alias -g G='| grep'
 alias -g GI='| grep -i'
 alias -g V='| vim -'
 
-alias s="screen -r || screen -c $HOME/.screen.defaultlayout"
+#alias s="screen -r || screen -c $HOME/.screen.defaultlayout"
 
 
 #
@@ -315,6 +315,5 @@ LOCAL_SETTINGS=$HOME/.zshrc.local
 #docker
 alias dl='docker ps -l -q'
 alias dkwrm="docker ps -a | grep "weeks ago" | awk '{print $1}' | xargs docker rm"
-
 
 

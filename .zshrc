@@ -1,12 +1,19 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/dotfiles/oh-my-zsh
 
+# Path to my custom themes
+ZSH_CUSTOM=$HOME/dotfiles/myzshtheme
+
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 
-ZSH_THEME="arrow" 
+#ZSH_THEME="arrow" 
+
+# THEME NAME -> $ZSH_CUSTOM/$ZSH_THEME.zsh-theme
+ZSH_THEME=my
+
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -41,24 +48,14 @@ DISABLE_AUTO_TITLE="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(django fabric git gnu-utils go golang knife mercurial node npm osx pip python redis-cli ruby supervisor tmuxinator vagrant virtualenv)
+plugins=(django docker fabric git gnu-utils go golang knife mercurial node npm osx pip python redis-cli ruby supervisor tmux tmuxinator vagrant virtualenv)
 
 source $ZSH/oh-my-zsh.sh
 
 
 # Customize to your needs...
-PROMPT='$(virtualenv_prompt_info)'$PROMPT
-if [ -z "$SSH_TTY" ]; then
-	#PROMPT='[$HOST]'$PROMPT
-	PROMPT=$PROMPT
-else
-	PROMPT='%{$fg_bold[green]%}[$HOST]%{$reset_color%}'$PROMPT
-fi
-
 source $HOME/.zshrc.mine
-
-# oh-my-zsh theme
-source $HOME/dotfiles/my.zsh-theme
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+

@@ -122,8 +122,11 @@ jj () {
         fi
     fi
 }
-source /usr/local/Cellar/z/1.8/etc/profile.d/z.sh
-alias j='z'
+
+if [ -f /usr/local/Cellar/z/1.8/etc/profile.d/z.sh ]; then
+    source /usr/local/Cellar/z/1.8/etc/profile.d/z.sh
+    alias j='z'
+fi
 alias sha1='echo -n "${1}" | openssl sha1 | sed "s/^.* //"'
 alias f="open ."
 alias up="cd ../"
